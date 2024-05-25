@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+ <head>
+  <title>AleGarces</title>
+  <link rel="stylesheet"
+   href="style.css">
+ </head>
+ 
+ <body
+  background="https://png.pngtree.com/background/20210716/original/pngtree-baby-pink-stars-spot-background-picture-image_1351587.jpg">
+  
+  <center> <a
+    href="index.html"><button>
+     <h3>More Girls</h3>
+    </button> </center> </a>
+  <center>
+   <h2>~AleGarces~19~🇨🇴~</h2></a>
+  </center>
+  
+  <center>
+   <a
+    href="https://pbs.twimg.com/media/GKVkd1jXgAABbhP?format=jpg&name=large"><img
+     src="https://pbs.twimg.com/media/GKVkd1jXgAABbhP?format=jpg&name=large"
+     height="400" width="300" /> </a>
+  </center>
+  
+  <center>
+   <a
+    href="https://pbs.twimg.com/media/FmK0nnBWAAAH1OR?format=jpg&name=large"><img
+     src="https://pbs.twimg.com/media/FmK0nnBWAAAH1OR?format=jpg&name=large"
+     height="150" width="100" /> </a>
+   
+   <a
+    href="https://pbs.twimg.com/media/F5cCJOAXsAAIZA_?format=jpg&name=large"><img
+     src="https://pbs.twimg.com/media/F5cCJOAXsAAIZA_?format=jpg&name=large"
+     height="150" width="100" /> </a>
+   
+   <a
+    href="https://pbs.twimg.com/media/F8v6ZkHWYAAHR9V?format=jpg&name=large"><img
+     src="https://pbs.twimg.com/media/F8v6ZkHWYAAHR9V?format=jpg&name=large"
+     height="150" width="100" /> </a>
+   
+   
+   <a
+    href="https://pbs.twimg.com/media/F_pG1d5XcAIaC-0?format=jpg&name=large"><img
+     src="https://pbs.twimg.com/media/F_pG1d5XcAIaC-0?format=jpg&name=large"
+     height="150" width="100" /> </a>
+   
+   
+   <a
+    href="https://pbs.twimg.com/media/GAaNgsDW0AAjqju?format=jpg&name=large"><img
+     src="https://pbs.twimg.com/media/GAaNgsDW0AAjqju?format=jpg&name=large"
+     height="150" width="100" /> </a>
+   
+   
+   <a
+    href="https://pbs.twimg.com/media/GAaM0GzWAAA2853?format=jpg&name=large"><img
+     src="https://pbs.twimg.com/media/GAaM0GzWAAA2853?format=jpg&name=large"
+     height="150" width="100" /> </a>
+   
+   <center>
+    
+    <h2>
+     <font color="deepskyblue">Social
+      Media</font>
+    </h2>
+    
+    <center>
+     <a
+      href="https://onlyfans.com/alegarces666">
+      <button>OnlyFans</button></a>
+     <a href="https://t.me/AleGarcess">
+      <button>Telegram</button></a>
+     
+     
+     <a
+      href="https://fansly.com/ale_garces">
+      <button>Fansly</button></a>
+     <br>
+     <br>
+     <a href="">
+      <button>3,632
+       Reviews</button></a>
+    </center><br>
+    
+    <h2>Add a Review</h2>
+    <form id="commentForm">
+     <label for="name">Name/Nickname:
+     </label><br>
+     <input type="text" id="name"
+      name="name" required><br>
+     <label
+      for="comment">Review:</label><br>
+     <textarea id="comment"
+      name="comment"
+      required></textarea><br>
+     <button
+      type="submit">Submit</button>
+    </form>
+    <h2>Reviews</h2>
+    <div id="comments">
+     <!-- Comments will be displayed here -->
+    </div>
+    
+    <script>
+     // Load comments from localStorage on page load
+     window.onload = function() {
+         var savedComments = JSON.parse(localStorage.getItem('comments'));
+         if (savedComments) {
+             savedComments.forEach(function(comment) {
+                 displayComment(comment);
+             });
+         }
+     };
+     
+     // Function to display a comment
+     function displayComment(comment) {
+         var commentDiv = document.createElement("div");
+         commentDiv.innerHTML = "<strong>" + comment.name + ":</strong> " + comment.text;
+         document.getElementById("comments").appendChild(commentDiv);
+     }
+     
+     // Function to save a comment to localStorage
+     function saveComment(comment) {
+         var savedComments = JSON.parse(localStorage.getItem('comments')) || [];
+         savedComments.push(comment);
+         localStorage.setItem('comments', JSON.stringify(savedComments));
+     }
+     
+     // Event listener for form submission
+     document.getElementById("commentForm").addEventListener("submit", function(event) {
+         event.preventDefault();
+         var name = document.getElementById("name").value;
+         var commentText = document.getElementById("comment").value;
+         var comment = { name: name, text: commentText };
+         saveComment(comment);
+         displayComment(comment);
+         document.getElementById("commentForm").reset();
+     });
+    </script>
+    
+    
+ </body>
+</html>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
